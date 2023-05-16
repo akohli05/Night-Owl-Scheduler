@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D4E0F9"
+        tools:context=".UI.Activity.CoursesDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarMain"
+            app:theme="@style/MyToolbarStyle"
+            app:titleTextColor="#FFFF"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/gradient_header"
+            app:layout_anchorGravity="center" tools:ignore="MissingConstraints"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonCancel"
+            android:layout_width="67dp"
+            android:layout_height="59dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:clickable="true"
+            android:onClick="deleteCourse"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/ic_delete"
+            app:layout_constraintHorizontal_bias="0.829"
+            app:rippleColor="#00FFFFFF" app:backgroundTint="@color/ic_launcher_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editCourseTitle" app:layout_constraintVertical_bias="0.811"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonEdit"
+            android:layout_width="57dp"
+            android:layout_height="63dp"
+            android:clickable="true"
+            android:onClick="updateCourse"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/ic_check"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.598"
+            app:rippleColor="#00FFFFFF"
+            app:backgroundTint="@color/ic_launcher_background" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editCourseTitle"
+            app:layout_constraintVertical_bias="0.8"/>
+
+    <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="116dp"/>
+    <View
+            android:id="@+id/divider3"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="172dp"/>
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="52dp"/>
+    <EditText
+            android:id="@+id/editCourseStatus"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_width="141dp"
+            android:layout_height="53dp"
+            android:hint="In Progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.762" android:layout_marginBottom="216dp"></EditText>
+    <TextView
+            android:text="Title"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_width="77dp"
+            android:layout_height="39dp" android:id="@+id/tvCourseTitleDetail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.065"
+            android:layout_marginBottom="480dp"/>
+    <TextView
+            android:text="Start Date"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/tvCourseStartDetail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.073"
+            android:layout_marginBottom="400dp"/>
+    <TextView
+            android:text="End Date"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_width="122dp"
+            android:layout_height="44dp" android:id="@+id/tvCourseEndDetail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.076" android:layout_marginBottom="304dp"/>
+    <EditText
+            android:id="@+id/editCourseStartDate"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_width="141dp"
+            android:layout_height="53dp"
+            android:hint="01/20/2022"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.762" android:layout_marginBottom="396dp"></EditText>
+    <EditText
+            android:id="@+id/editCourseEndDate"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_width="141dp"
+            android:layout_height="53dp"
+            android:hint="06/01/2022"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.766" android:layout_marginBottom="304dp"></EditText>
+    <EditText
+            android:id="@+id/editCourseTitle"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:layout_width="141dp"
+            android:layout_height="53dp"
+            android:hint="Course 1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.777" android:layout_marginBottom="476dp"></EditText>
+    <TextView
+            android:text="Course Status"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_width="171dp"
+            android:layout_height="56dp" android:id="@+id/tvCourseStatusDetail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.066" android:layout_marginBottom="204dp"/>
+    <TextView
+            android:text="Course"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/textViewCourseDetails"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarMain" android:layout_marginTop="20dp"/>
+
+    <ImageButton
+            android:layout_width="290dp"
+            android:layout_height="47dp"
+            android:layout_alignParentLeft="true"
+            android:onClick="goToAssessmentsListScreen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:backgroundTint="@color/ic_launcher_background"
+            app:srcCompat="@drawable/ic_assessment" android:id="@+id/imageButton"
+            app:layout_constraintHorizontal_bias="0.024" android:layout_marginBottom="64dp"/>
+
+    <TextView
+            android:text="Assessments"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:elevation="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/textViewAssessments"
+            app:layout_constraintHorizontal_bias="0.01" android:layout_marginBottom="76dp"/>
+    <ImageButton
+            android:layout_width="221dp"
+            android:layout_height="43dp"
+            android:layout_alignParentLeft="true"
+            android:onClick="goToMentorsListScreen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:backgroundTint="@color/ic_launcher_background"
+            app:srcCompat="@drawable/ic_mentor" android:id="@+id/imageButton2"
+            app:layout_constraintHorizontal_bias="0.015" android:layout_marginBottom="4dp"/>
+    <ImageButton
+            android:layout_width="157dp"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:onClick="goToNotesListScreen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:backgroundTint="@color/ic_launcher_background"
+            app:srcCompat="@drawable/ic_note" android:id="@+id/imageButton3"
+            app:layout_constraintHorizontal_bias="0.015" android:layout_marginBottom="128dp"/>
+    <TextView
+            android:text="Mentors"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:elevation="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/textViewMentors"
+            app:layout_constraintHorizontal_bias="0.008" android:layout_marginBottom="16dp"/>
+    <TextView
+            android:text="Notes"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:elevation="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/textViewNotes"
+            app:layout_constraintHorizontal_bias="0.008" android:layout_marginBottom="136dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

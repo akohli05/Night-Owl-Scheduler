@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D4E0F9"
+        tools:context=".UI.Activity.MentorsListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarMain"
+            app:theme="@style/MyToolbarStyle"
+            app:titleTextColor="#FFFF"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/gradient_header"
+            app:layout_anchorGravity="center" tools:ignore="MissingConstraints"/>
+
+    <TextView
+            android:text="Email"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_width="122dp"
+            android:layout_height="44dp" android:id="@+id/tvMentorEmailLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.086" android:layout_marginBottom="152dp"/>
+    <TextView
+            android:text="Name"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_width="77dp"
+            android:layout_height="39dp" android:id="@+id/tvMentorNameLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.074"
+            android:layout_marginBottom="324dp"/>
+    <TextView
+            android:text="Phone"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/tvMentorPhoneLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.073"
+            android:layout_marginBottom="244dp"/>
+    <TextView
+            android:id="@+id/tvMentorPhoneDetail"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_width="178dp"
+            android:layout_height="53dp"
+            android:hint="123-123-1234"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.755" android:layout_marginBottom="224dp"></TextView>
+    <TextView
+            android:id="@+id/tvMentorNameDetail"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:layout_width="141dp"
+            android:layout_height="53dp"
+            android:hint="John Doe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.651" android:layout_marginBottom="308dp"></TextView>
+    <TextView
+            android:id="@+id/tvMentorEmailDetail"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_width="198dp"
+            android:layout_height="53dp"
+            android:hint="test@cloud.com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.826" android:layout_marginBottom="140dp"></TextView>
+    <ImageView
+            android:layout_width="386dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="215dp" app:srcCompat="@drawable/ic_outline_rectangle"
+            android:id="@+id/imageView2" app:layout_constraintHorizontal_bias="0.48"
+            android:layout_marginBottom="420dp"/>
+    <ImageView
+            android:layout_width="190dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="145dp" app:srcCompat="@drawable/ic_mentor" android:id="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.497" android:layout_marginBottom="456dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
